@@ -8,7 +8,7 @@ dependencies:
   pre:
     - mkdir "${HOME}/perl"
     - printf 'conf prerequisites_policy follow\nconf commit\n' | perl -MCPAN -e shell
-    - perm -MCPAN -e 'install Digest::SHA'
+    - perl -MCPAN -e 'install Digest::SHA'
     - perl -MCPAN -e 'install JSON'
 test:
   override:
