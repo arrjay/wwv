@@ -4,10 +4,10 @@ use strict;
 use JSON -support_by_pp;
 use POSIX;
 use DateTime;
-use Digest::SHA1;
+use Digest::SHA;
 
 # get your file hash
-my $sha1 = Digest::SHA1 -> new;
+my $sha1 = Digest::SHA -> new(1);
 $sha1->add(__FILE__);
 
 # get the time from datetime...
