@@ -2,9 +2,14 @@ machine:
   environment:
     PERL5OPT: "-I${HOME}/perl/lib/perl5 -I${HOME}/perl/lib/perl5/site_perl"
 dependencies:
+  cache_directories:
+    - ~/.cpan
+    - ~/perl5
   pre:
     - mkdir "${HOME}/perl"
     - printf 'conf prerequisites_policy follow\nconf commit\n' | perl -MCPAN -e shell
+    - perm -MCPAN -e 'install Digest::SHA'
+    - perl -MCPAN -e 'install JSON'
 test:
   override:
     - perl ./wwv.pl > tick.json
