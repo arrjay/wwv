@@ -1,0 +1,3 @@
+test:
+  override:
+    - perl ./wwv.pl > tick.json
