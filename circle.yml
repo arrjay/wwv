@@ -1,6 +1,10 @@
+machine:
+  environment:
+    PERL5OPT: "-I${HOME}/perl/lib/perl5 -I${HOME}/perl/lib/perl5/site_perl"
 dependencies:
   pre:
-    - sudo apt-get install -f libdigest-sha-perl libjson-perl
+    - mkdir "${HOME}/perl"
+    - printf 'conf prerequisites_policy follow\nconf commit\n' | perl -MCPAN -e shell
 test:
   override:
     - perl ./wwv.pl > tick.json
