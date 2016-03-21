@@ -1,0 +1,30 @@
+{
+   "MONTH" : 3,
+   "HOUR" : 2,
+   "WDAY" : 1,
+   "YDAY" : 81,
+   "SECOND" : 0,
+   "DAY" : 21,
+   "OFFSET" : 0,
+   "MINUTE" : 2,
+   "WEEK" : {
+      "YEAR_OF" : 2016,
+      "NUMBER" : 12
+   },
+   "EN" : {
+      "WDAY_NAME" : "Monday",
+      "WDAY_ABBR" : "Mon",
+      "MONTH_NAME" : "March",
+      "MONTH_ABBR" : "Mar"
+   },
+   "GENERATOR" : "a5cce34dece84517713717a301db30a3d2ac4f57",
+   "CALENDAR" : "Gregorian",
+   "EPOCH" : 1458525720,
+   "YEAR" : 2016,
+   "TZ" : {
+      "LONG_NAME" : "UTC",
+      "SHORT_NAME" : "UTC"
+   },
+   "LEAP_SECONDS" : 25,
+   "IS_DST" : false
+}
