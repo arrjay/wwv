@@ -25,4 +25,4 @@ deployment:
     - cp tick.json tock.json
     - git add tock.json
     - git commit -m "Update ($(date '+%F %T %Z')) [ci skip]"
-    - git push tick master
+    - git push origin tick
