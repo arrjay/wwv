@@ -12,7 +12,8 @@ dependencies:
     - perl -e 'use JSON' || perl -MCPAN -e 'install JSON'
     - gem install xml-simple
     - gem install json
+    - mkdir "$CIRCLE_TEST_REPORTS/rb-parsecheck"
 test:
   override:
     - perl ./wwv.pl > tick.json
-    - ruby check.rb tick.json
+    - ruby check.rb > $CIRCLE_TEST_REPORTS/rb-parsecheck/details.xml
