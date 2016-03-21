@@ -18,11 +18,13 @@ test:
     - perl ./wwv.pl > tick.json
     - ruby check.rb > $CIRCLE_TEST_REPORTS/rb-parsecheck/details.xml
 deployment:
-  commands:
-    - git config --global user.email circleci@circleci
-    - git config --global user.name CircleCI
-    - git checkout tick
-    - cp tick.json tock.json
-    - git add tock.json
-    - git commit -m "Update ($(date '+%F %T %Z')) [ci skip]"
-    - git push origin tick
+  ticks:
+    branch: master
+    commands:
+      - git config --global user.email circleci@circleci
+      - git config --global user.name CircleCI
+      - git checkout tick
+      - cp tick.json tock.json
+      - git add tock.json
+      - git commit -m "Update ($(date '+%F %T %Z')) [ci skip]"
+      - git push origin tick
