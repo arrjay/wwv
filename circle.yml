@@ -10,6 +10,9 @@ dependencies:
     - printf 'conf prerequisites_policy follow\nconf commit\n' | perl -MCPAN -e shell
     - perl -e 'use Digest::SHA' || perl -MCPAN -e 'install Digest::SHA'
     - perl -e 'use JSON' || perl -MCPAN -e 'install JSON'
+    - gem install xmlsimple
+    - gem install json
 test:
   override:
     - perl ./wwv.pl > tick.json
+    - ruby check.rb tick.json
